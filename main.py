@@ -16,7 +16,7 @@ def diary(c):
     for i, fn in enumerate(fs):
         name = os.path.split(fn)[-1].replace(".txt", "")
         f = open(fn)
-        diary = f.read
+        diary = f.read()
         f.close()
         contents.append((name, diary, i))
     return render_template("diary.html", cs = contents)
